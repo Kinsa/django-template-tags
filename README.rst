@@ -18,7 +18,7 @@ Include in the PIP requirements file the following line:
 
 ::
 
- -e git://github.com/jbergantine/django-templatetags.git#egg=django_templatetags
+ -e git+git://github.com/jbergantine/django-templatetags.git#egg=django_templatetags
 
 And then install as normal (IE:)
 

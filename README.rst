@@ -36,7 +36,8 @@ Add to the project's settings.py file tuple of installed apps: ::
 Usage
 =====
 
-#### fetch_content
+fetch_content
+`````````````
 
 Returns a specific number of entries for a particular model. (If the model is sorted by date published they will be sorted that way hence the name get_latest_content.)
 

@@ -127,7 +127,7 @@ This will be pass for both `{% if nav.about_menu %}` and
 widont Filter
 `````````````
 
-_From: http://djangosnippets.org/snippets/17/_
+From: http://djangosnippets.org/snippets/17/
 
 "Widows" are single words that end up on their own line, thanks to automatic line-breaks. This is an no-no in graphic design, and is especially unsightly in headers and other short bursts of text. This filter automatically replaces the space before the last word of the passed value with a non-breaking space, ensuring there is always at least two words on any given line. Usage is like so:
 

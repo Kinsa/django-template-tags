@@ -133,4 +133,5 @@ From: http://djangosnippets.org/snippets/17/
 
 ::
 
+ {% load widont %}
  {{ blog.entry.headline|widont }}

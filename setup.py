@@ -68,6 +68,10 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
 
 version = __import__('django_templatetags').__version__
 
+install_requires = [
+    'Django>=1.3',
+]
+
 setup(
     name='django-templatetags',
     version=version,
@@ -82,6 +86,7 @@ https://github.com/jbergantine/django-templatetags""",
     license='New BSD License',
     platforms=['any'],
     packages=packages,
+    install_requires = install_requires,
     cmdclass=cmdclasses,
     data_files=data_files,
     classifiers=[

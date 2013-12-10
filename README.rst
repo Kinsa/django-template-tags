@@ -140,7 +140,7 @@ From: http://djangosnippets.org/snippets/17/
 dumbquotes Filter
 `````````````````
 
-Replaces HTML or UTF-8 encoded double and single quotes with their "plain text" equivalent.
+Replaces HTML or UTF-8 encoded double and single quotes (smart quotes) with their "plain text" (dumb quotes) equivalent.
 
 ::
 

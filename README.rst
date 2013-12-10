@@ -135,3 +135,24 @@ From: http://djangosnippets.org/snippets/17/
 
  {% load widont %}
  {{ blog.entry.headline|widont }}
+
+
+dumbquotes Filter
+`````````````````
+
+Replaces HTML or UTF-8 encoded double and single quotes with their "plain text" equivalent.
+
+::
+
+ {% load dumb_text %}
+ {{ object.attribute|dumbquotes }}
+
+dumbpunct Filter
+````````````````
+
+Replaces HTML or UTF-8 encoded ellipsis, ampersands, em dashes, en dashes and non breaking spaces with the "plain text" equivalent.
+
+::
+
+ {% load dumb_text %}
+ {{ object.attribute|dumbpunct }}

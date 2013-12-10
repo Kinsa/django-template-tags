@@ -146,13 +146,7 @@ Replaces HTML or UTF-8 encoded double and single quotes (smart quotes) with thei
 
  {% load dumb_text %}
  {{ object.attribute|dumbquotes }}
- 
-Combine with the striptags and escape filter for use in things like RSS templates (striptags will remove any HTML tags and escape will convert Unicode characers into their HTML-encoded counterparts).
 
-::
-
- {% load dumb_text %}
- {{ object.attribute|striptags|escape|dumbquotes }}
 
 dumbpunct Filter
 ````````````````
@@ -163,10 +157,3 @@ Replaces HTML or UTF-8 encoded ellipsis, ampersands, em dashes, en dashes and no
 
  {% load dumb_text %}
  {{ object.attribute|dumbpunct }}
- 
-Combine with the striptags and escape filter for use in things like RSS templates (striptags will remove any HTML tags and escape will convert Unicode characers into their HTML-encoded counterparts).
-
-::
-
- {% load dumb_text %}
- {{ object.attribute|striptags|escape|dumbpunct }}

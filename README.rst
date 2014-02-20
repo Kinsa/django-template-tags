@@ -170,3 +170,31 @@ The ``remel`` filter takes exactly one argument, the name of the HTML element to
 
  {% load remel %}
  {{ object.attribute|remel:"element_name" }}
+
+For example, take the following HTML, say it's the beginning of a blog post:
+
+::
+
+ <figure>
+   <img src="spam.jpg" alt="Spam pressed onto rice and wrapped in nori." />
+   <figcaption>Spam musubi is a popular Hawaiian snack.</figcaption>
+ </figure>
+ <h1>Just got back from Hawaii</h1>
+
+Contained in such a way that it is accessible as:
+
+::
+
+ {{ blog.post }}
+
+When filtered through ``remel`` to remove the ``<figure>`` element, as in:
+
+::
+
+ {{ blog.post|remel:"figure" }}
+
+Will output:
+
+::
+
+ <h1>Just got back from Hawaii</h1>

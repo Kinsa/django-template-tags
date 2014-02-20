@@ -181,7 +181,7 @@ For example, take the following HTML, say it's the beginning of a blog post:
  </figure>
  <h1>Just got back from Hawaii</h1>
 
-Contained in such a way that it is accessible as:
+Contained in an app in such a way that it is accessible in a template as:
 
 ::
 

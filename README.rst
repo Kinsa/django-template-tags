@@ -78,14 +78,14 @@ Example usage:
  {# Set the context so {{ nav.home }} (or {{ mynav.home }}) is True #}
  {% nav "home" %} or {% nav "home" for mynav %}
 
-The most basic (and common) use of the tag is to call `{% nav [item] %}`,
+The most basic (and common) use of the tag is to call ``{% nav [item] %}``,
 where `[item]` is the item you want to check is selected.
 
-By default, this tag creates a `nav` context variable. To use an
-alternate context variable name, call `{% nav [item] for [var_name] %}`.
+By default, this tag creates a ``nav`` context variable. To use an
+alternate context variable name, call ``{% nav [item] for [var_name] %}``.
 
-To use this tag across `{% block %}` tags (or other context-stacking
-template tags such as `{% for %}`), call the tag without specifying an
+To use this tag across ``{% block %}`` tags (or other context-stacking
+template tags such as ``{% for %}``), call the tag without specifying an
 item.
 
 Your HTML navigation template should look something like:
@@ -112,8 +112,8 @@ To override this in a child template, you'd do:
  {% endblock %}
 
 This works for multiple levels of template inheritance, due to the fact
-that the tag only does anything if the `nav` context variable does not
-exist. So only the first `{% nav %}` call found will ever be processed.
+that the tag only does anything if the ``nav`` context variable does not
+exist. So only the first ``{% nav %}`` call found will ever be processed.
 
 To create a sub-menu you can check against, dot-separate the item:
 
@@ -121,8 +121,8 @@ To create a sub-menu you can check against, dot-separate the item:
 
  {% nav "about_menu.info" %}
 
-This will be pass for both `{% if nav.about_menu %}` and
-`{% if nav.about_menu.info %}`.
+This will be pass for both ``{% if nav.about_menu %}`` and
+``{% if nav.about_menu.info %}``.
 
 widont Filter
 `````````````
@@ -162,9 +162,9 @@ Replaces HTML or UTF-8 encoded ellipsis, ampersands, em dashes, en dashes and no
 remel Filter
 ````````````
 
-Sometimes `|removetags:"spam"` isn't enough. Sometimes you need to remove the HTML element and its contents both. For example a `<figure>` tag in a pargraph of content that's being used as an excerpt. The `remel` filter will do that.
+Sometimes ``|removetags:"spam"`` isn't enough. Sometimes you need to remove the HTML element and its contents both. For example a ``<figure>`` tag in a pargraph of content that's being used as an excerpt. The ``remel`` filter will do that.
 
-The `remel` filter takes exactly one argument, the name of the HTML element to remove.
+The ``remel`` filter takes exactly one argument, the name of the HTML element to remove.
 
 ::
 

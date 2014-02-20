@@ -157,3 +157,16 @@ Replaces HTML or UTF-8 encoded ellipsis, ampersands, em dashes, en dashes and no
 
  {% load dumb_text %}
  {{ object.attribute|dumbpunct }}
+
+
+remel Filter
+````````````
+
+Sometimes `|removetags:"spam"` isn't enough. Sometimes you need to remove the HTML element and its contents both. For example a `<figure>` tag in a pargraph of content that's being used as an excerpt. The `remel` filter will do that.
+
+The `remel` filter takes exactly one argument, the name of the HTML element to remove.
+
+::
+
+ {% load remel %}
+ {{ object.attribute|remel:"element_name" }}

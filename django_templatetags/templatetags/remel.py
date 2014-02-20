@@ -8,7 +8,7 @@ register = Library()
 
 def remel(value, arg):
 	if len(arg.split()) > 1:
-		raise TemplateSyntaxError("'remel' takes exactly one argument, the name of the single HTML element to be removed from the output")
+		raise TemplateSyntaxError("The 'remel' filter takes exactly one argument, the name of the single HTML element to be removed from the output.")
 	def removeEl(soup, elname):
 	    for el in soup.findAll(elname):
 	        el.extract()

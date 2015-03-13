@@ -7,7 +7,7 @@ Installation from Source
 
 ::
 
- $ git clone git@github.com:jbergantine/django-django-templatetags.git
+ $ git clone git@github.com:jbergantine/django-templatetags.git
  $ cd django-django-templatetags
  $ python setup.py install
 

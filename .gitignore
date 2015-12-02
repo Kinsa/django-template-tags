@@ -1,3 +1,7 @@
-*.pyc
-.DS_Store
+build
 dist
+.DS_Store
+.eggs/
+.tox/
+*.egg-info/
+*.pyc

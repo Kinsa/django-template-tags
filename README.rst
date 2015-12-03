@@ -2,6 +2,12 @@
  Django Template Tags
 =====================
 
+.. image:: https://travis-ci.org/jbergantine/django-templatetags.svg?branch=develop
+
+`View builds on TravisCI.`__
+
+__ https://travis-ci.org/jbergantine/django-templatetags
+
 Installation from Source
 ========================
 
@@ -26,6 +32,22 @@ And then install as normal (IE:)
 
  $ pip install -r path/to/requirements/file.txt
 
+Testing
+=======
+
+::
+
+ $ python setup.py test
+
+With TOX
+
+First, install Tox, then run the tests. This will test against the Django versions specified in the environments specified in the ``tox.ini`` file
+
+::
+
+ $ pip install tox
+ $ tox
+
 Configure the Project To Include the Application
 ================================================
 
@@ -44,7 +66,7 @@ Returns a specific number of entries for a particular model. (If the model is so
 Example usage:
 
 ::
- 
+
  {% load fetch_content %}
  {% get_latest_content application_name.model_name 5 as foo %}
  {% for bar in foo %}
@@ -54,7 +76,7 @@ Example usage:
 Can also be used to return all entries for a particular model.
 
 Example usage:
- 
+
 ::
 
  {% load fetch_content %}
@@ -70,11 +92,11 @@ Handles navigation item selection.
 
 Example usage:
 
-:: 
+::
 
  {# Set up the variable for use across context-stacking tags #}
  {% nav %} or {% nav for mynav %}
-   
+
  {# Set the context so {{ nav.home }} (or {{ mynav.home }}) is True #}
  {% nav "home" %} or {% nav "home" for mynav %}
 

@@ -1,5 +1,10 @@
 from django import template
-from django.db.models import get_model
+try:
+    # < Django 1.9
+    from django.db.models import get_model
+except:
+    # Django 1.9
+    from django.apps.config import AppConfig
 
 
 register = template.Library()
@@ -29,7 +34,12 @@ def do_latest_content(parser, token):
                                            "'get_latest_content' must be an "
                                            "'application name'.'model name' "
                                            "string")
-    model = get_model(*model_args)
+    try:
+        # < Django 1.9
+        model = get_model(*model_args)
+    except:
+        # Django 1.9
+        model = AppConfig.get_model(*model_args)
     if model is None:
         raise template.TemplateSyntaxError("'get_latest_content' tag got an "
                                            "invalid model: %s" % bits[1])
@@ -71,7 +81,12 @@ def do_all_content(parser, token):
                                            "'get_all_content' must be an "
                                            "'application name'.'model name' "
                                            "string")
-    model = get_model(*model_args)
+    try:
+        # < Django 1.9
+        model = get_model(*model_args)
+    except:
+        # Django 1.9
+        model = AppConfig.get_model(*model_args)
     if model is None:
         raise template.TemplateSyntaxError("'get_all_content' tag got an "
                                            "invalid model: %s" % bits[1])

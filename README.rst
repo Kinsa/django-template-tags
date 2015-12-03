@@ -4,6 +4,10 @@
 
 .. image:: https://travis-ci.org/jbergantine/django-templatetags.svg?branch=develop
 
+`View builds on TravisCI.`__
+
+__ https://travis-ci.org/jbergantine/django-templatetags
+
 Installation from Source
 ========================
 

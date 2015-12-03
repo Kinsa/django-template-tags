@@ -6,13 +6,6 @@ class SimpleTest(TestCase):
     def setUp(self):
         self.client = Client()
 
-    def test_that_the_app_loads(self):
-        # Issue a GET request to a random page.
-        response = self.client.get('/admin/login/')
-
-        # Check that the response is 200 OK.
-        self.failUnlessEqual(response.status_code, 200)
-
     def test_nav_home(self):
         # Issue a GET request to the Home page.
         response = self.client.get('/')

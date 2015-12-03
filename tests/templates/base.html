@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character set -->
+        <meta charset="utf-8" />
+
+        <title>Test</title>
+    </head>
+    <body>
+
+        {% block nav %}
+
+            <header id="site-header">
+                <nav>
+                    <ol>
+                        {% include "_nav.html" %}
+                    </ol>
+                </nav>
+                <a href="#site-footer" class="jump-to-nav">Nav</a>
+            </header>
+
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+
+            <footer id="site-footer">
+                <nav>
+                    <ol>
+                        <li class="back-to-top">
+                            <a href="#site-header">Back to Top</a>
+                        </li>
+                        {% include "_nav.html" %}
+                    </ol>
+                </nav>
+            </footer>
+
+        {% endblock nav %}
+
+    </body>
+</html>

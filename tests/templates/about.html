@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load nav %}
+{% load widont %}
+{% load dumb_text %}
+{% load remel %}
+
+{# nav - see template tag for usage instructions #}
+{% block nav %}
+    {% nav "about" %}
+    {{ block.super }}
+{% endblock %}
+
+{# content #}
+{% block content %}
+    Congratulations! Your Django project is up and running.
+{% endblock content %}

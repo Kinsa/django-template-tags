@@ -5,7 +5,10 @@ setup(
     name='django-templatetags',
     version='1.0.0',
     packages=find_packages(exclude=["tests"]),
-    install_requires=['Django>=1.7'],
+    install_requires=[
+        'beautifulsoup4>=4.0',
+        'Django>=1.7'
+    ],
     author='Joe Bergantine',
     author_email='jbergantine@gmail.com',
     description="Set of 'generic' templatetags for Django",

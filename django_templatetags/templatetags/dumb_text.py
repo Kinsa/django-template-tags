@@ -5,11 +5,13 @@ from django import template
 
 register = template.Library()
 
+
 @register.filter(name='dumbquotes')
 def dumbquotes(text):
     text = re.sub(r'(&ldquo;|&\#8220;|&rdquo;|&\#8221;)', r'"', text)
     text = re.sub(r'(&lsquo;|&\#8216;|&rsquo;|&\#8217;)', r"'", text)
     return text
+
 
 @register.filter(name='dumbpunct')
 def dumbpunct(text):

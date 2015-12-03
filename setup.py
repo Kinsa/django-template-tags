@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-templatetags',
-    version='1.0.0',
+    version='1.1.0',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         'beautifulsoup4>=4.0',
@@ -13,7 +13,7 @@ setup(
     author_email='jbergantine@gmail.com',
     description="Set of 'generic' templatetags for Django",
     url='https://github.com/jbergantine/django-robots',
-    download_url='https://github.com/jbergantine/django-templatetags/tarball/1.0.0',
+    download_url='https://github.com/jbergantine/django-templatetags/tarball/1.1.0',
     license='New BSD License',
     platforms=['any'],
     classifiers=[

@@ -2,18 +2,18 @@
  Django Template Tags
 =====================
 
-.. image:: https://travis-ci.org/jbergantine/django-templatetags.svg?branch=develop
+.. image:: https://travis-ci.org/bergantine/django-templatetags.svg?branch=develop
 
 `View builds on TravisCI.`__
 
-__ https://travis-ci.org/jbergantine/django-templatetags
+__ https://travis-ci.org/bergantine/django-templatetags
 
 Installation from Source
 ========================
 
 ::
 
- $ git clone git@github.com:jbergantine/django-templatetags.git
+ $ git clone git@github.com:bergantine/django-templatetags.git
  $ cd django-django-templatetags
  $ python setup.py install
 
@@ -24,7 +24,7 @@ Include in the PIP requirements file the following line:
 
 ::
 
- -e git+git://github.com/jbergantine/django-templatetags.git#egg=django_templatetags
+ -e git+git://github.com/bergantine/django-templatetags.git#egg=django_templatetags
 
 And then install as normal (IE:)
 

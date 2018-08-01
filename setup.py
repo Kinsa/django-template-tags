@@ -10,7 +10,7 @@ if os.path.exists('README.rst'):
 
 setup(
     name='django-templatetags',
-    version='1.1.1',
+    version='1.1.2',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         'bs4>=0.0.1',

@@ -10,18 +10,18 @@ if os.path.exists('README.rst'):
 
 setup(
     name='django-templatetags',
-    version='1.1.2',
+    version='1.1.3',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         'bs4>=0.0.1',
         'Django>=1.11'
     ],
     author='Joe Bergantine',
-    author_email='joe.bergantine@gmail.com',
+    author_email='joe@kinsa.us',
     description=description,
     long_description=long_description,
-    url='https://github.com/jbergantine/django-templatetags',
-    download_url='https://github.com/jbergantine/django-templatetags/tarball/1.1.1',
+    url='https://github.com/bergantine/django-templatetags',
+    download_url='https://github.com/bergantine/django-templatetags/tarball/1.1.3',
     license='New BSD License',
     platforms=['any'],
     classifiers=[
@@ -29,8 +29,9 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 1.11',
-        'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
@@ -43,6 +44,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: BSD License',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',

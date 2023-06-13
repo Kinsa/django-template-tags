@@ -7,7 +7,6 @@ Example usage:
 
 from django.template import Library
 
-
 register = Library()
 
 
@@ -17,4 +16,6 @@ def strip_querystring(value):
         return bits
     except:
         return value
+
+
 register.filter(strip_querystring)

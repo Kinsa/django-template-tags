@@ -1,0 +1,9 @@
+{% load strip_querystring %}
+
+{% with 'https://example.com/?foo=bar&spam=eggs' as url %}
+    {{ url|strip_querystring }}
+{% endwith %}
+
+{% with 'https://example.com/?product_id=1&variation=2&utm_source=The-WWW' as url %}
+    {{ url|strip_querystring }}
+{% endwith %}

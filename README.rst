@@ -220,3 +220,15 @@ Will output:
 ::
 
  <h1>Just got back from Hawaii</h1>
+
+
+strip_querystring Filter
+````````````````````````
+
+Removes querystring, e.g. `?spam=eggs` from the end of a URL (or any other string)
+
+Example usage:
+
+::
+
+ <link rel="canonical" href="{{ request.build_absolute_uri|strip_querystring }}" />

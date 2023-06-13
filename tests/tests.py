@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.test.client import Client
 
 
-class SimpleTest(TestCase):
+class TestNavTemplatetag(TestCase):
     def setUp(self):
         self.client = Client()
 
@@ -49,4 +49,38 @@ class SimpleTest(TestCase):
         self.assertContains(
             response,
             '<li class="selected"><a href="/about/">About</a></li>'
+        )
+
+
+class TestStripQuerystringFilter(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_strip_querystring_filter(self):
+        # Issue a GET request to the Home page.
+        response = self.client.get('/strip-querystring-test/')
+
+        # Check that the response is 200 OK.
+        self.failUnlessEqual(response.status_code, 200)
+
+        # Check that the home.html template is being used.
+        self.assertTemplateUsed(response, 'strip_querystring_filter_test_template.html')
+
+        # Check that the response contains what we expect.
+        self.assertContains(
+            response,
+            'https://example.com/',
+            count=2
+        )
+
+        # Check that the response doesn't contain what we don't want.
+        self.assertNotContains(
+            response,
+            '?foo=bar&spam=eggs'
+        )
+
+        # Check that the response doesn't contain what we don't want.
+        self.assertNotContains(
+            response,
+            '?product_id=1&variation=2&utm_source=The-WWW'
         )

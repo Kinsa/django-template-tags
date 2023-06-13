@@ -1,7 +1,9 @@
 build
 dist
 .DS_Store
+.python-version
 .eggs/
 .tox/
+.venv/
 *.egg-info/
 *.pyc

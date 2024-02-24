@@ -16,12 +16,12 @@ setup(
         'bs4>=0.0.1',
         'Django>=1.11'
     ],
-    author='Joe Bergantine',
-    author_email='joe@kinsa.us',
+    author='Kinsa Creative Incorporated',
+    author_email='enquiries@kinsa.cc',
     description=description,
     long_description=long_description,
-    url='https://github.com/bergantine/django-templatetags',
-    download_url='https://github.com/bergantine/django-templatetags/tarball/1.1.3',
+    url='https://github.com/Kinsa/django-templatetags',
+    download_url='https://github.com/Kinsa/django-templatetags/tarball/1.1.3',
     license='New BSD License',
     platforms=['any'],
     classifiers=[
